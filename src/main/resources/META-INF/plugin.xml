@@ -1,18 +1,26 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.jbou.ideaundelegaterun</id>
-    <name>idea-undelegate-run Template</name>
-    <vendor>jbou</vendor>
+    <name>Un-Delegate Run Actions</name>
+    <vendor>Gabriel Patzleiner</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+    <depends>com.intellij.gradle</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <project-components>
+        <component>
+            <implementation-class>com.github.jbou.ideaundelegaterun.ProjectPlugin</implementation-class>
+        </component>
+    </project-components>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.jbou.ideaundelegaterun.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <projectConfigurable instance="com.github.jbou.ideaundelegaterun.Settings"
+                             groupId="build.tools" order="last"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.jbou.ideaundelegaterun.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <extensions defaultExtensionNs="org.jetbrains.plugins.gradle">
+        <executionEnvironmentProvider
+                implementation="com.github.jbou.ideaundelegaterun.UndelegateExecutionEnvironmentProvider"
+                order="first"/>
+    </extensions>
 </idea-plugin>
