@@ -1,8 +1,8 @@
 # Un-Delegate Run Actions IDEA Plugin
 
 ![Build](https://github.com/JBou/idea-undelegate-run/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/com.github.jbou.ideaundelegaterun)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/com.github.jbou.ideaundelegaterun)
+[![Version](https://img.shields.io/jetbrains/plugin/v/com.github.jbou.ideaundelegaterun.svg)](https://plugins.jetbrains.com/plugin/24216-un-delegate-run-actions)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.jbou.ideaundelegaterun.svg)](https://plugins.jetbrains.com/plugin/24216-un-delegate-run-actions)
 
 Description
 ------------
@@ -20,7 +20,7 @@ IDEA.
 This way, you get the best of both worlds: Gradle builds, IDEA
 runs.
 Enable and configure the un-delegation in `Settings / Build,
-Execution, Deployment / Un-Delegate Run Actions`.
+Execution, Deployment / Build Tools / Un-Delegate Run Actions`.
 Tested with Gradle only, but it may also work with Maven
 delegation.
 
