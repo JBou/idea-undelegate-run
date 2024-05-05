@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+### Fixed
+
 - Removed `version` from `pluginUntilBuild` to make it compatible with future IDE versions (and 2024.1)
 
 ## [0.0.1] - 2024-04-20
